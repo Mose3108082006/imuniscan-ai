@@ -1,7 +1,2 @@
-streamlit
-pandas
-numpy
-reportlab
-pillow
-inference-sdk
-opencv-python-headless
+libgl1-mesa-glx
+libglib2.0-0
