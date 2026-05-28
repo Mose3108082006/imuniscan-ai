@@ -8,18 +8,18 @@ st.set_page_config(
 )
 
 # hide UI Streamlit default
+# PENTING: Kita tidak menyembunyikan [data-testid="stSidebar"] agar navigasi halaman tetap berfungsi
 st.markdown("""
     <style>
-        [data-testid="stSidebar"] {display: none;}
         header {visibility: hidden;}
         footer {visibility: hidden;}
         #MainMenu {visibility: hidden;}
     </style>
 """, unsafe_allow_html=True)
 
-# langsung ke dashboard
-# st.switch_page("pages/dashboard.py")
-
 st.title("Selamat Datang di IMUNISCAN AI")
+
+# Tombol navigasi
+# Perintah st.switch_page hanya akan diproses saat tombol ini ditekan (tidak error saat load)
 if st.button("Masuk ke Dashboard"):
     st.switch_page("pages/dashboard.py")
