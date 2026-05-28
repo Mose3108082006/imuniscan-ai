@@ -20,4 +20,6 @@ st.markdown("""
 # langsung ke dashboard
 # st.switch_page("pages/dashboard.py")
 
-st.stop()
+st.title("Selamat Datang di IMUNISCAN AI")
+if st.button("Masuk ke Dashboard"):
+    st.switch_page("pages/dashboard.py")
