@@ -18,6 +18,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # langsung ke dashboard
-st.switch_page("pages/dashboard.py")
+# st.switch_page("pages/dashboard.py")
 
 st.stop()
