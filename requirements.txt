@@ -3,5 +3,5 @@ pandas
 numpy
 reportlab
 pillow
-roboflow
 inference-sdk
+opencv-python-headless
