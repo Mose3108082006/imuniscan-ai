@@ -1,6 +1,5 @@
 import streamlit as st
 
-# Konfigurasi Halaman
 st.set_page_config(
     page_title="IMUNISCAN AI",
     page_icon="🧠",
@@ -8,7 +7,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# CSS untuk menyembunyikan elemen UI default
+# hide UI Streamlit default
 st.markdown("""
     <style>
         header {visibility: hidden;}
@@ -19,7 +18,7 @@ st.markdown("""
 
 st.title("Selamat Datang di IMUNISCAN AI")
 
-# NAVIGASI YANG BENAR:
-# Perintah switch_page diletakkan di dalam kondisi tombol
+# --- PERBAIKAN DI SINI ---
+# Gunakan st.button agar perintah pindah halaman hanya terjadi saat tombol diklik
 if st.button("Masuk ke Dashboard"):
     st.switch_page("pages/dashboard.py")
