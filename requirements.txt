@@ -3,4 +3,5 @@ pandas
 numpy
 reportlab
 pillow
+inference-sdk
 opencv-python-headless
