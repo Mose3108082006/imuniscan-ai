@@ -5,7 +5,7 @@ import sys
 import os
 
 # --- PERBAIKAN IMPORT (TIDAK MENGUBAH TAMPILAN) ---
-# Baris ini memastikan Python menemukan folder 'ai' dari dalam folder 'pages'
+# Baris ini memastikan Python menemukan folder 'ai' dari folder 'pages'
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from ai.roboflow_loader import load_model
 
@@ -124,10 +124,13 @@ st.markdown("""
 CLIENT, model_verifikasi, model_usia = load_model()
 
 # =========================================
-# TABS & LOGIKA (TIDAK BERUBAH)
+# TABS NAVIGASI
 # =========================================
 tab1, tab2 = st.tabs(["📥 Input Data", "📊 Medical Report"])
 
+# =========================================
+# TAB 1: WORKSPACE UTAMA
+# =========================================
 with tab1:
     col1, col2 = st.columns([1, 2.2], gap="large")
     with col1:
@@ -169,8 +172,12 @@ with tab1:
                 st.write(f"Usia: {usia}, Conf: {conf2}")
                 st.session_state["hasil"] = {"label": label, "conf": conf, "usia": usia, "conf2": conf2, "image": image}
 
+# =========================================
+# TAB 2: MEDICAL REPORT
+# =========================================
 with tab2:
     if "hasil" in st.session_state:
+        h = st.session_state["hasil"]
         st.write("Report Medical ditampilkan di sini.")
     else:
         st.info("Silakan unggah data di Tab 1.")
