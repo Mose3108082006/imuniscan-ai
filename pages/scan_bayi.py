@@ -1,13 +1,8 @@
 import streamlit as st
 from PIL import Image
 import tempfile
-import sys
-import os
 
-# Menambahkan direktori root ke path agar Python bisa menemukan folder 'ai'
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-# Mengimpor modul setelah path didaftarkan
+# Karena ai sudah di dalam folder pages, cukup gunakan import ini:
 from ai.roboflow_loader import load_model
 # =========================================
 # CONFIG
