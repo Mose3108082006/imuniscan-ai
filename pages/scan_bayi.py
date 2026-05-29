@@ -1,15 +1,9 @@
-import sys
-import os
-
-# Memastikan folder 'pages' bisa mendeteksi modul di dalamnya
-sys.path.append(os.path.dirname(__file__))
-
 import streamlit as st
 from PIL import Image
 import tempfile
 from ai.roboflow_loader import load_model
 
-# ... (lanjutkan dengan kode asli Anda di bawah ini)
+# =========================================
 # CONFIG
 # =========================================
 st.set_page_config(
