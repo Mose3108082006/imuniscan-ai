@@ -1,17 +1,13 @@
 import sys
 import os
 
-# Menambahkan direktori root ke dalam path sistem
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Menambahkan folder root ('/mount/src/imuniscan-ai') secara langsung
+sys.path.append('/mount/src/imuniscan-ai')
 
-# Sekarang import akan berhasil
 from ai.roboflow_loader import load_model
 import streamlit as st
 from PIL import Image
-import tempfile
-from ai.roboflow_loader import load_model
-
-# =========================================
+import tempfile=================================
 # CONFIG
 # =========================================
 st.set_page_config(
