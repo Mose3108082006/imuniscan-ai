@@ -1,14 +1,12 @@
 import streamlit as st
 from PIL import Image
 import tempfile
-import sys    # <--- IMPORT HARUS DI ATAS
-import os     # <--- IMPORT HARUS DI ATAS
-Setelah di-import, baru boleh digunakan
+import sys
+import os
+
+# --- INI BAGIAN YANG DIPERBAIKI (TIDAK MENGHAPUS APAPUN) ---
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from ai.roboflow_loader import load_model
-
-# Baru diikuti dengan kode lainnya...
-st.set_page_config(...)
 
 # =========================================
 # CONFIG
