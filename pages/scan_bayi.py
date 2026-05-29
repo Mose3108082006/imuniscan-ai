@@ -1,3 +1,11 @@
+import sys
+import os
+
+# Menambahkan direktori root ke dalam path sistem
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+# Sekarang import akan berhasil
+from ai.roboflow_loader import load_model
 import streamlit as st
 from PIL import Image
 import tempfile
