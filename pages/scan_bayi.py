@@ -4,10 +4,11 @@ import tempfile
 import sys
 import os
 
-# --- INI BAGIAN YANG DIPERBAIKI (TIDAK MENGHAPUS APAPUN) ---
+# Menambahkan direktori root ke sys.path agar folder 'ai' terlihat
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from ai.roboflow_loader import load_model
 
+# Sekarang import akan berhasil karena path sudah didaftarkan
+from ai.roboflow_loader import load_model
 # =========================================
 # CONFIG
 # =========================================
