@@ -1,15 +1,21 @@
 import sys
 import os
 
-# Menambahkan folder root ('/mount/src/imuniscan-ai') secara langsung
+# Menambahkan root direktori ke system path agar folder 'ai' bisa dibaca
+# Streamlit Cloud secara default menaruh aplikasi di /mount/src/imuniscan-ai
 sys.path.append('/mount/src/imuniscan-ai')
 
-from ai.roboflow_loader import load_model
 import streamlit as st
 from PIL import Image
-import tempfile=================================
-# CONFIG
-# =========================================
+import tempfile
+from ai.roboflow_loader import load_model
+
+# --- SISA KODE ANDA ---
+# Pastikan tidak ada karakter aneh/tersembunyi di sini
+st.set_page_config(page_title="IMUNISCAN AI", layout="wide")
+
+# ... (lanjutkan CSS dan UI Anda)
+
 st.set_page_config(
     page_title="IMUNISCAN AI",
     page_icon="🧠",
